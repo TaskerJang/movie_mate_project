@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+.img_box {
+	position: relative;
+	width: 100%;
+	height: 0px;
+	padding-bottom: 145.37%;
+	overflow: hidden;
+	border: 1px solid rgb(234, 233, 232);
+	border-radius: 10px;
+}
+
+.profile_img {
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: 1px solid rgb(234, 233, 232);
+	border-radius: 10px;
+	background: rgb(248, 248, 248);
+	z-index: 1;
+}
+
+.numbering {
+	overflow: hidden;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 25px;
+	height: 25px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 22px;
+	color: white;
+	opacity: 0.6;
+	z-index: 2;
+	background-color: black;
+	border-radius: 10px;
+}
+
+.wall {
+	height: 100px;
+}
+
+.carousel-inner {
+	width: 88% !important;
+	max-height: 650px !important;
+	margin: 0 auto;
+}
+
+.carousel-item {
+	width: 100% !important;
+	height: calc(100% + 72px) !important;
+	margin-bottom: 25px !important;
+}
+
+.carousel-item:hover {
+	cursor: pointer;
+}
+
+.movieInfo_box {
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+.movieInfo_box>* {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.movieInfo_box:hover .profile_img {
+	transform: scale(1.1);
+}
+
+.movieInfo_box:hover .numbering {
+	visibility: hidden;
+}
+
+.movieInfo_box:hover .text_info_box {
+	transform: translate(0, -120px);
+	height: 120px;
+	background: black;
+	color: white;
+	padding-top: 35px;
+	padding-left: 10px;
+	border-radius: 0 0 10px 10px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.text_info_box {
+	transition: all 0.1s ease;
+	z-index: 2;
+	position: relative;
+	height: 120px;
+}
+
+.profile_img {
+	transition: all 0.1s ease;
+}
+
+h1 {
+	padding: 0 80px 0 300px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+	height: 40px;
+	width: 40px !important;
+	top: 45% !important;
+	color: #000 !important;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.info {
+	overflow: hidden;
+	vertical-align: top;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	display: -webkit-box;
+}
+
+.carousel-control-prev {
+	left: 4% !important;
+}
+
+.carousel-control-next {
+	right: 4% !important;
+}
+
+.title {
+	font-weight: 900;
+	font-size: 25px;
+	margin: 10px 0 20px 0;
+	height: 40px;
+}

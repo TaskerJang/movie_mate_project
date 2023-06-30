@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+.main_box {
+	min-height: 60vh !important;
+}
+
+.comment_box {
+	margin: 25px auto;
+	width: 900px;
+	background-color: #f2f2f2;
+	border-radius: 7px;
+	padding: 15px;
+}
+
+.comment_info {
+	overflow: hidden;
+	border-bottom: 1px solid #d6d4d4;
+}
+
+.comment_user_box {
+	float: left;
+	display: flex;
+}
+
+.cocomment_profile_img {
+	margin-right: 5px;
+}
+
+.user_box_name {
+	cursor: pointer;
+	padding-bottom: 15px;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.comment_starWant {
+	font-size: 18px;
+	border-radius: 18px;
+	padding: 1px 10px;
+	background-color: white;
+	float: right;
+	background-color: white;
+}
+
+.comment_content {
+	cursor: pointer;
+	padding: 15px 0;
+	border-bottom: 1px solid #d6d4d4;
+}
+
+.cocomment {
+	cursor: pointer;
+}
+
+.bxs-star {
+	font-size: 16px;
+}
+
+.cocomment_upComment_box {
+	display: flex;
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.cocomment_up {
+	cursor: pointer;
+	padding: 2px 6px 2px 6px;
+	border-radius: 5px;
+}
+
+.cocomment_up:hover {
+	background-color: #c8c8c8;
+}
+
+.cocomment_comment {
+	cursor: pointer;
+	margin-left: 15px;
+	padding: 2px 6px 2px 6px;
+	border-radius: 5px;
+}
+
+.cocomment_comment:hover {
+	background-color: #c8c8c8;
+}
+
+.commentDel_btn {
+	margin-left: calc(100% - 150px);
+	width: 40px;
+}

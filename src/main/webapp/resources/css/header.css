@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	background-color: white;
+	width: 100% !important;
+	z-index: 999;
+	margin: 0 auto;
+}
+
+.logo_main {
+	
+}
+
+.container-fluid {
+	width: 90vw !important;
+}
+
+.btn {
+	border: 1px solid #bcbcbc !important;
+	color: black !important;
+}
+
+.btn:hover {
+	background-color: #7900FF !important;
+	color: white !important;
+	border: 1px solid #7900FF !important;
+}
+
+.search_control {
+	width: 350px !important;
+	/* background-color: #f3f6f4 !important; */
+}
+
+.profile {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+}
+
+.profile_box {
+	width: 64px;
+	padding: 5px;
+	text-align: center;
+}
+
+.container, .container-fluid, .container-lg, .container-md,
+	.container-sm, .container-xl, .container-xxl { -
+	-bs-gutter-x: 9rem !important;
+}
+
+.dark_mode_btn {
+	border-style: none;
+	border: none;
+	outline: none;
+	font-size: 25px;
+	background-color: transparent;
+	margin-left: 20px;
+}
+
+/*
+dark mode css
+*/
+.dark_mode {
+	background-color: #282c34;
+	color: white;
+}
+
+.dark_mode * :not(.starpoint_box, .star_radio, .starporint_bg,
+	.label_star) {
+	background-color: #282c34;
+}
+
+.dark_mode .movieInfo_box:hover .text_info_box {
+	transform: translate(0, -120px);
+	height: 120px;
+	background: black;
+	color: white;
+	padding-top: 35px;
+	padding-left: 10px;
+	border-radius: 0 0 10px 10px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.dark_mode .text_info_box {
+	transition: all 0.1s ease;
+	z-index: 2;
+	position: relative;
+	height: 120px;
+}
+
+.dark_mode .text_info_box * {
+	background: transparent;
+}
+
+.dark_mode .similar_movie:hover .movieInfo_miniBox {
+	transform: translate(0, -70px);
+	height: 70px;
+	background: black;
+	color: white;
+	padding-top: 20px;
+	padding-left: 5px;
+	border-radius: 0 0 10px 10px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.dark_mode .movieInfo_miniBox {
+	transition: all 0.1s ease;
+	z-index: 2;
+	position: relative;
+	height: 70px;
+}
+
+.dark_mode .movieInfo_miniBox * {
+	background: transparent;
+}
+
+dark_mode .movieInfo_box:hover .movie_info_text_box {
+	transform: translate(0, -120px);
+	height: 120px;
+	background: black;
+	color: white;
+	padding-top: 35px;
+	padding-left: 10px;
+	border-radius: 0 0 10px 10px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.dark_mode .movie_info_text_box {
+	transition: all 0.1s ease;
+	z-index: 2;
+	position: relative;
+	height: 120px;
+}
+
+.dark_mode .movie_info_text_box * {
+	background: transparent;
+}
+
+.dark_mode .header_btn {
+	background: white;
+	border-color: white;
+}
+
+.dark_mode .margin_box {
+	background-color: #282c34;
+}
+
+.dark_mode .footer_box {
+	background-color: #282c34;
+}
+
+.dark_mode .pp {
+	color: white !important;
+}
+
+.dark_mode .want_btn {
+	color: white !important;
+}
+
+.dark_mode #pancel {
+	color: white !important;
+}
+
+.dark_mode .cast_name {
+	color: white;
+}
+
+.dark_mode .comment_info {
+	background-color: #eeeeee !important;
+	border: 1px solid #eeeeee;
+	overflow: hidden;
+}
+
+.dark_mode .comment_info * {
+	background-color: #eeeeee !important;
+	border-color: black;
+	color: black;
+}
+
+.dark_mode .ss2 {
+	background-color: gray;
+}
+
+.dark_mode .ss3 {
+	background-color: gray;
+}
+
+.dark_mode .comment_box {
+	background-color: #eeeeee !important;
+	color: black !important;
+}
+
+.dark_mode .dark_comment * {
+	background-color: #eeeeee !important;
+}
+
+.dark_mode .comment_info {
+	border-bottom: 1px solid #d6d4d4;
+}
+
+.dark_mode .comment_content {
+	border-bottom: 1px solid #d6d4d4;
+}
+
+.dark_mode .comment_starWant {
+	background-color: white !important;
+}
+
+.dark_mode .comment_starWant * {
+	background-color: white !important;
+}
+
+.dark_mode .search_control {
+	background-color: white !important;
+}
+/* movie_mate_moreInfo */
+.dark_mode .comment_moreInfo_title {
+	color: white;
+}
+
+.dark_mode .comment_moreInfo_button_box {
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #808080;
+}
+
+.dark_mode .comment_moreInfo_release_date {
+	color: #808080;
+}
+
+.dark_mode .movie_mate_moreInfo_comment {
+	font-size: 18px;
+	background-color: #808080;
+}
+
+.dark_mode .cleanedBot_box {
+	border: 1px solid #808080 !important;
+}
+
+.dark_mode .cocomment_up  id, span {
+	color: #808080;
+}
+
+.dark_mode .count-box * {
+	color: #808080;
+}
+
+.dark_mode .comment_moreInfo_content {
+	border-top: 1px solid #808080 !important;
+}
+
+.dark_mode #modify_delete_dropdown {
+	background-color: #282c34;
+}
+
+.dark_mode .movie_mate_moreInfo_dropdown {
+	background-color: #282c34 !important;
+}
+
+.dark_mode .bx-dots-vertical-rounded {
+	color: #808080 !important;
+}
+
+.dark_mode .button_box * {
+	color: white;
+}
+
+.dark_mode #doing {
+	color: white;
+}
+
+.dark_mode .movie_mate_moreInfo_comment_icon {
+	background: #808080 !important;
+	color: white !important;
+}
+
+.dark_mode .movie_mate_moreInfo_comment_icon_span {
+	background: #808080 !important;
+	color: white !important;
+}
+
+.dark_mode .carousel-control-prev {
+	color: white !important;
+}
+
+.dark_mode .carousel-control-next {
+	color: white !important;
+}
+
+.dark_mode .update_btn {
+	color: white;
+}
+
+.white_mode {
+	background-color: white;
+}
+
+.white_mode .pp {
+	color: gray !important;
+}
+
+.white_mode .want_btn {
+	color: gray !important;
+}
+
+.white_mode #pancel {
+	color: gray !important;
+}

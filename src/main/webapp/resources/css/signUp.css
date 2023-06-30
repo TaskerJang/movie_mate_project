@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+body {
+	background-color: #fafafa;
+	overflow-y: hidden;
+}
+
+#main_box {
+	width: 450px;
+	margin: 100px auto;
+	border: 1px solid gray;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.btn {
+	margin: 0;
+}
+
+.logo_img:hover {
+	cursor: pointer;
+}
+
+.input-group {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.logo_img {
+	width: 350px;
+	margin: 15px;
+}
+
+.input-group-text {
+	padding: 0;
+}
+
+.btn-outline-danger {
+	background-color: #7900ff;
+	width: 400px;
+}
+
+.check {
+	width: 30px !important;
+	font-size: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bx-check-circle {
+	color: #3ac979;	
+}
+
+.bx-x-circle {
+	color: #df1010;
+}
+
+.su{
+	border: none !important;
+	color: white !important;
+}
+
+.su:hover {
+	background-color: #7900ff;
+}

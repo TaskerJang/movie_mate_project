@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mmmovie">
+	<select id="openApi_count" resultType="int"
+		parameterType="vo.MovieMate_MovieVO">
+		SELECT COUNT(*) FROM moviemate_movie WHERE title =
+		#{title} AND release_date = TO_DATE(#{release_date},'YYYY/MM/DD')
+	</select>
+
+	<insert id="openApi_insert" parameterType="vo.MovieMate_MovieVO">
+		INSERT INTO
+		moviemate_movie values(seq_movie_idx.nextVal, #{profile_img},
+		#{background_img},
+		#{title},
+		TO_CHAR(TO_DATE(#{release_date},'YYYY/MM/DD'),'YYYY/MM/DD'),
+		#{nation}, #{genre}, #{running_time}, #{company},
+		#{movie_info},
+		#{film_rating}, #{star_score}, #{attandance})
+	</insert>
+
+	<select id="selectOne" resultType="vo.MovieMate_MovieVO"
+		parameterType="vo.MovieMate_MovieVO">
+		SELECT * FROM moviemate_movie WHERE movie_idx =
+		#{movie_idx}
+	</select>
+
+	<select id="boxoffice_list" resultType="vo.MovieMate_MovieVO"
+		parameterType="vo.MovieMate_MovieVO">
+		SELECT * FROM (SELECT RANK() OVER(ORDER BY release_date
+		DESC) no, m.*
+		FROM (SELECT * FROM moviemate_movie WHERE profile_img !=
+		'no_data.jpg' AND release_date &lt;= sysdate) m )
+		WHERE no BETWEEN 1
+		AND 15
+	</select>
+
+	<select id="top10_list" resultType="vo.MovieMate_MovieVO"
+		parameterType="vo.MovieMate_MovieVO">
+		SELECT * FROM (SELECT RANK() OVER(ORDER BY star_score
+		DESC, release_date desc) no, m.*
+		FROM (SELECT * FROM moviemate_movie WHERE profile_img !=
+		'no_data.jpg' AND release_date &lt;= '20220101') m )
+		WHERE (no BETWEEN 1 AND 15)
+	</select>
+
+	<select id="search_movie" resultType="vo.MovieMate_MovieVO"
+		parameterType="string">
+		SELECT * FROM moviemate_movie WHERE title LIKE '%' ||
+		#{keyword} || '%'
+	</select>
+
+	<select id="masterpiece_list" resultType="vo.MovieMate_MovieVO"
+		parameterType="vo.MovieMate_MovieVO">
+		select * from moviemate_movie
+		where (release_date
+		between'20100101'and '20230101'and star_score > 4) and (profile_img !=
+		'no_data.jpg')
+	</select>
+
+	<select id="selectMovieIdx" resultType="vo.MovieMate_MovieVO"
+		parameterType="vo.Movie_CastVO">
+		SELECT * FROM moviemate_movie WHERE movie_idx =
+		#{movie_idx}
+	</select>
+
+	<select id="avg_star_list" resultType="vo.MovieMate_MovieVO"
+		parameterType="vo.MovieMate_MovieVO">
+		select *
+		from moviemate_movie
+		where release_date &gt;=
+		'20151231' and (profile_img !=
+		'no_data.jpg')
+		order by star_score DESC
+	</select>
+
+	<select id="genre_list" resultType="vo.MovieMate_MovieVO"
+		parameterType="vo.MovieMate_MovieVO">
+		SELECT * FROM (SELECT RANK() OVER(ORDER BY star_score
+		DESC, release_date desc) no, m.*
+		FROM (SELECT * FROM moviemate_movie WHERE profile_img !=
+		'no_data.jpg' AND genre LIKE '%' ||
+		#{genre} || '%') m )
+		WHERE (no BETWEEN 1 AND 15)
+	</select>
+
+	<select id="famous_list" resultType="vo.MovieMate_MovieVO"
+		parameterType="vo.MovieMate_MovieVO">
+		select *
+		from moviemate_movie
+		WHERE genre = '공포'and
+		(profile_img !=
+		'no_data.jpg')
+	</select>
+
+	<select id="moviemate_movie" resultType="vo.MovieMate_MovieVO"
+		parameterType="int">
+		select * from moviemate_movie where movie_idx =
+		#{movie_idx}
+	</select>
+
+	<select id="selectCategory" resultType="vo.MovieMate_MovieVO"
+		parameterType="vo.SimilarVO">
+		SELECT * FROM (SELECT RANK() OVER(ORDER BY release_date
+		DESC) no, m.*
+		FROM (SELECT * FROM moviemate_movie WHERE profile_img !=
+		'no_data.jpg' AND genre LIKE '%' ||
+		#{genre} || '%' AND movie_idx !=
+		#{movie_idx}) m )
+		WHERE no BETWEEN 1 AND #{number}
+	</select>
+
+	<select id="bestMovieList" resultType="vo.BestMovie_ViewVO"
+		parameterType="vo.MovieMate_UserVO">
+		select mmm.nation, AVG(mu.star_score) * 20 avg,
+		COUNT(mmm.nation) count FROM moviemate_movie mmm, movie_user mu WHERE
+		mmm.movie_idx = mu.movie_idx AND mu.star_score > 0 AND mu.user_idx =
+		#{user_idx} GROUP BY mmm.nation
+		ORDER BY count DESC
+	</select>
+
+	<select id="bestGenreList" resultType="vo.BestGenre_ViewVO"
+		parameterType="vo.MovieMate_UserVO">
+		select mmm.genre, AVG(mu.star_score) * 20 avg,
+		COUNT(mmm.nation) count FROM moviemate_movie mmm, movie_user mu WHERE
+		mmm.movie_idx = mu.movie_idx AND mu.star_score > 0 AND mu.user_idx =
+		#{user_idx} GROUP BY mmm.genre
+		ORDER BY count DESC
+	</select>
+
+	<select id="runtime" resultType="int"
+		parameterType="vo.MovieMate_UserVO">
+		SELECT ROUND(sum(running_time) / 60) FROM
+		moviemate_movie mmm, movie_user mu
+		WHERE mmm.movie_idx = mu.movie_idx
+		AND mu.user_idx = #{user_idx}
+	</select>
+
+	<update id="update_starScore" parameterType="vo.Movie_UserVO">
+		UPDATE
+		moviemate_movie SET star_score = #{star_score} WHERE movie_idx =
+		#{movie_idx}
+	</update>
+
+
+</mapper>
+
