@@ -26,7 +26,8 @@
 
 ## 메뉴 트리:
 
-![무비메이트 이미지](https://github.com/JJangcoding/movie_mate_project/assets/124780552/d27e47a7-44d5-4838-a23d-29d716e27e6a)
+![image](https://github.com/TaskerJang/movie_mate_project/assets/124780552/c377f63d-36c8-4a4e-8206-fad49f231399)
+
 
 ![무비메이트 이미지](https://github.com/JJangcoding/movie_mate_project/assets/124780552/c1711cf0-eaed-409f-a4c8-097e5d48e327)
 
