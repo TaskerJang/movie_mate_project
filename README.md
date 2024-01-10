@@ -29,7 +29,8 @@
 ![image](https://github.com/TaskerJang/movie_mate_project/assets/124780552/c377f63d-36c8-4a4e-8206-fad49f231399)
 
 
-![무비메이트 이미지](https://github.com/JJangcoding/movie_mate_project/assets/124780552/c1711cf0-eaed-409f-a4c8-097e5d48e327)
+![image](https://github.com/TaskerJang/movie_mate_project/assets/124780552/f86b0520-4497-45ea-87ac-a8fc63fcd694)
+
 
 ## DB 설계:
 
