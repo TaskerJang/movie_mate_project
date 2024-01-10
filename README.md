@@ -34,7 +34,8 @@
 
 ## DB 설계:
 
-![image](https://github.com/TaskerJang/movie_mate_project/assets/124780552/52978602-bb46-4137-85fc-bb94eea7da33)
+![제목 없음](https://github.com/TaskerJang/movie_mate_project/assets/124780552/9fe063e3-abb7-43bc-9dd6-d28ca5f9f699)
+
 
 
 ## 주요 기능
