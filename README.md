@@ -15,6 +15,7 @@
 6. 더 보기 영화의 모든 정보 출력 📜
 7. 로그인 화면의 자체 회원 기능 구현 🔐
 8. 풋터(footer)에 개발자 정보 담은 링크 배열 출력 📎
+![image](https://github.com/TaskerJang/movie_mate_project/assets/124780552/8b4471d8-00a4-4cca-af34-2f25e30997e5)
 
 ![무비메이트 이미지](https://github.com/TaskerJang/movie_mate_project/assets/124780552/c704cfe9-33c1-47de-a2f1-a0fe9df09e23)
 
