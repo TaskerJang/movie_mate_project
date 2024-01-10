@@ -34,7 +34,8 @@
 
 ## DB 설계:
 
-![무비메이트 이미지](https://github.com/JJangcoding/movie_mate_project/assets/124780552/bbe1e575-16dd-4716-9983-201c34e63fe1)
+![image](https://github.com/TaskerJang/movie_mate_project/assets/124780552/52978602-bb46-4137-85fc-bb94eea7da33)
+
 
 ## 주요 기능
 
